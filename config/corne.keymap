@@ -17,29 +17,9 @@
             key-positions = <20 21>;
         };
 
-        Colon {
-            bindings = <&kp COLON>;
-            key-positions = <9 10>;
-        };
-
         Escape {
             bindings = <&kp ESC>;
             key-positions = <14 13>;
-        };
-
-        Tab {
-            bindings = <&kp TAB>;
-            key-positions = <14 15>;
-        };
-
-        LControl {
-            bindings = <&kp LCTRL>;
-            key-positions = <25 26>;
-        };
-
-        RControl {
-            bindings = <&kp RCTRL>;
-            key-positions = <34 33>;
         };
 
         LBrack {
@@ -74,22 +54,22 @@
 
         Underscore {
             bindings = <&kp UNDERSCORE>;
-            key-positions = <16 17>;
+            key-positions = <14 15>;
         };
 
         SQuote {
             bindings = <&kp SQT>;
-            key-positions = <6 7>;
+            key-positions = <10 9>;
         };
 
         DQuote {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <18 19>;
+            key-positions = <22 21>;
         };
 
         VQuote {
             bindings = <&kp GRAVE>;
-            key-positions = <30 31>;
+            key-positions = <33 34>;
         };
 
         BSlash {
@@ -97,39 +77,24 @@
             key-positions = <33 32>;
         };
 
-        Hash {
-            bindings = <&kp HASH>;
-            key-positions = <27 26>;
-        };
-
         Hyphen {
             bindings = <&kp MINUS>;
-            key-positions = <4 5>;
+            key-positions = <2 3>;
         };
 
-        Delete {
-            bindings = <&kp DELETE>;
-            key-positions = <21 22>;
+        Hash {
+            bindings = <&kp HASH>;
+            key-positions = <26 27>;
         };
 
-        Equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <8 9>;
-        };
-
-        Plus {
-            bindings = <&kp PLUS>;
-            key-positions = <28 29>;
-        };
-
-        Bang {
-            bindings = <&kp EXCLAMATION>;
+        Pipe {
+            bindings = <&kp PIPE>;
             key-positions = <1 2>;
         };
 
-        At {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <2 3>;
+        Tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <26 25>;
         };
 
         LConnect {
@@ -146,6 +111,11 @@
             bindings = <&bt BT_CLR>;
             key-positions = <1 3 5 6 8 10>;
         };
+
+        Equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <9 8>;
+        };
     };
 
     keymap {
@@ -159,10 +129,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W  &kp F         &kp P         &kp B                   &kp J                &kp L  &kp U      &kp Y    &kp SEMICOLON  &none
-&none  &kp A  &kp R  &kp S         &kp T         &kp G                   &kp M                &kp N  &kp E      &kp I    &kp O          &none
-&none  &kp Z  &kp X  &kp C         &kp D         &kp V                   &kp K                &kp H  &kp COMMA  &kp DOT  &kp FSLH       &none
-                     &kp LEFT_ALT  &kp LEFT_GUI  &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT RET  &mo 1  &kp RALT
+&none  &kp Q  &kp W  &kp F         &kp P         &kp B                   &kp J         &kp L              &kp U             &kp Y    &kp SEMICOLON  &none
+&none  &kp A  &kp R  &kp S         &kp T         &kp G                   &kp M         &kp N              &kp E             &kp I    &kp O          &none
+&none  &kp Z  &kp X  &kp C         &kp D         &kp V                   &kp K         &kp H              &kp COMMA         &kp DOT  &kp FSLH       &none
+                     &kp LEFT_ALT  &kp LEFT_GUI  &mt LEFT_SHIFT SPACE    &lt 1 RETURN  &mt LEFT_META TAB  &kp LEFT_CONTROL
             >;
         };
 
