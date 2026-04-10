@@ -12,91 +12,6 @@
     combos {
         compatible = "zmk,combos";
 
-        Backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <20 21>;
-        };
-
-        Escape {
-            bindings = <&kp ESC>;
-            key-positions = <14 13>;
-        };
-
-        LBrack {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <28 27>;
-        };
-
-        RBrack {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <31 32>;
-        };
-
-        LParen {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <15 16>;
-        };
-
-        RParen {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <19 20>;
-        };
-
-        LBrace {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <3 4>;
-        };
-
-        RBrace {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <7 8>;
-        };
-
-        Underscore {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <14 15>;
-        };
-
-        SQuote {
-            bindings = <&kp SQT>;
-            key-positions = <10 9>;
-        };
-
-        DQuote {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <22 21>;
-        };
-
-        VQuote {
-            bindings = <&kp GRAVE>;
-            key-positions = <33 34>;
-        };
-
-        BSlash {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <33 32>;
-        };
-
-        Hyphen {
-            bindings = <&kp MINUS>;
-            key-positions = <2 3>;
-        };
-
-        Add {
-            bindings = <&kp PLUS>;
-            key-positions = <26 27>;
-        };
-
-        Pipe {
-            bindings = <&kp PIPE>;
-            key-positions = <1 2>;
-        };
-
-        Tilde {
-            bindings = <&kp TILDE>;
-            key-positions = <26 25>;
-        };
-
         LConnect {
             bindings = <&bt BT_SEL 0>;
             key-positions = <1 3 5>;
@@ -112,9 +27,24 @@
             key-positions = <1 3 5 16>;
         };
 
-        Equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <9 8>;
+        QW {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <1 2>;
+        };
+
+        ZX {
+            bindings = <&kp LEFT_CONTROL>;
+            key-positions = <26 25>;
+        };
+
+        M, {
+            bindings = <&kp RETURN>;
+            key-positions = <31 32>;
+        };
+
+        cp {
+            bindings = <&kp LEFT_CONTROL>;
+            key-positions = <33 32>;
         };
     };
 
@@ -129,10 +59,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W  &kp E         &kp R         &kp T                   &kp Y         &kp U              &kp I             &kp O    &kp P          &none
-&none  &kp A  &kp S  &kp D         &kp F         &kp G                   &kp H         &kp J              &kp K             &kp L    &kp SEMICOLON  &none
-&none  &kp Z  &kp X  &kp C         &kp V         &kp B                   &kp N         &kp M              &kp COMMA         &kp DOT  &kp FSLH       &none
-                     &kp LEFT_ALT  &kp LEFT_GUI  &mt LEFT_SHIFT SPACE    &lt 1 RETURN  &mt LEFT_META TAB  &kp LEFT_CONTROL
+&none  &kp Q  &kp W  &kp E          &kp R         &kp T        &kp Y           &kp U      &kp I                 &kp O    &kp P          &none
+&none  &kp A  &kp S  &kp D          &kp F         &kp G        &kp H           &kp J      &kp K                 &kp L    &kp SEMICOLON  &none
+&none  &kp Z  &kp X  &kp C          &kp V         &kp B        &kp N           &kp M      &kp COMMA             &kp DOT  &kp FSLH       &none
+                     &kp LEFT_META  &lt 2 ESCAPE  &kp SPACE    &kp LEFT_SHIFT  &lt 1 TAB  &mt LEFT_ALT LS(TAB)
             >;
         };
 
@@ -144,10 +74,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1           &kp N2       &kp N3         &kp N4        &kp N5         &kp N6    &kp N7       &kp N8     &kp N9     &kp N0  &trans
-&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH       &kp DOLLAR    &kp PERCENT    &kp LEFT  &kp DOWN     &kp UP     &kp RIGHT  &trans  &trans
-&trans  &trans           &kp LCTRL    &kp AMPERSAND  &kp ASTERISK  &trans         &trans    &kp RA(SQT)  &kp RA(O)  &kp RA(A)  &trans  &trans
+&trans  &kp N1           &kp N2       &kp N3         &kp N4        &kp N5         &kp N6    &kp N7       &kp N8     &kp N9     &kp N0          &trans
+&trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH       &kp DOLLAR    &kp PERCENT    &kp LEFT  &kp DOWN     &kp UP     &kp RIGHT  &kp LEFT_SHIFT  &trans
+&trans  &trans           &kp LCTRL    &kp AMPERSAND  &kp ASTERISK  &trans         &trans    &kp RA(SQT)  &kp RA(O)  &kp RA(A)  &trans          &trans
                                       &trans         &trans        &trans         &trans    &trans       &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&trans  &trans  &kp PIPE   &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans    &trans          &trans     &kp BSLH  &kp GRAVE  &kp SQT            &trans
+&trans  &trans  &kp TILDE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans    &kp UNDERSCORE  &kp MINUS  &kp PLUS  &kp EQUAL  &kp DOUBLE_QUOTES  &trans
+&trans  &trans  &trans     &kp LBKT              &kp RBKT               &trans    &trans          &trans     &trans    &trans     &trans             &trans
+                           &trans                &trans                 &trans    &trans          &trans     &trans
             >;
         };
     };
