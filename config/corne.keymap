@@ -29,7 +29,7 @@
 
         Backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <1 2>;
+            key-positions = <27 28>;
         };
 
         LControl {
